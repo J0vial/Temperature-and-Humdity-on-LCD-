@@ -16,17 +16,14 @@ void setup() {
 }
 
 void loop() {
-  // start working...
-  Serial.println("=================================");
-  Serial.println("Sample DHT11...");
+  
   
   // read without samples.
   byte temperature = 0;
   byte humidity = 0;
   int err = SimpleDHTErrSuccess;
   if ((err = dht11.read(&temperature, &humidity, NULL)) != SimpleDHTErrSuccess) {
-    Serial.print("Read DHT11 failed, err="); Serial.print(SimpleDHTErrCode(err));
-    Serial.print(","); Serial.println(SimpleDHTErrDuration(err)); delay(1000);
+    delay(1000);
     return;
   }
 
