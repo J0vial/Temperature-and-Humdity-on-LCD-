@@ -26,8 +26,7 @@ void loop() {
     delay(1000);
     return;
   }
-
-  lcd.init();                      // initialize the lcd 
+                   // initialize the lcd 
   lcd.init();
   lcd.backlight();
   lcd.setCursor(1,1);
